@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'core'
 ]
 
 MIDDLEWARE = [
@@ -118,3 +119,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Every entry here has to be in capitals
+# AUTH_USER_MODEL here is assigned with core.user where core is our Application
+# and model is the named of the model that we are using in the core
+AUTH_USER_MODEL = 'core.User'
